@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  nodejs-sequelize:
+    image:  azeemjoseph/nodejs-expressjs-sequelize:2.0
+    command: sh -c "yarn install && yarn run dev"
+    ports: 
+      - "5000"
+    working_dir: /Nodejs-Expressjs-Sequelize
+    volumes: 
+      - ./:/Nodejs-Expressjs-Sequelize
+    environment: 
+      PORT: 5000
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: sequelize_test
+      MYSQL_DB: sequelize_test   
+
+  mysql:
+    image: mysql:8.0
+    volumes: 
+      - azeem-sequelize:/var/lib/mysql
+    environment: 
+      MYSQL_ROOT_PASSWORD: sequelize_test
+      MYSQL_DATABASES: sequelize_test
+
+  nginx:
+      image: nginx:latest
+      volumes:
+        - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      depends_on:
+        - nodejs-sequelize
+      ports:
+        - "4000:4000"     
+
+volumes: 
+  azeem-sequelize:    
