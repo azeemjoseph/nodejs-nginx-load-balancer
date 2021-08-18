@@ -15,14 +15,14 @@ const users = require("./routes/user");
 app.get("/", (req, res) => {
   res.status(200);
   res.send(`
-    <br>&emsp;&emsp; <h3 style="color:red;">Nodejs Server with Express and Sequelize Configuration with Migration and Models running succesfully!!</h1>
+    <br>&emsp;&emsp; <h3 style="color:Maroon;border-width:10px;border-style:solid;border-color:olivedrab;">Nginx server to load balance Nodejs Server with Express and Sequelize Configuration with Migration and Models running succesfully!!</h1>
     <p style="color:blue;"> Now you can modify, edit, merge up to your requirements.</p>
     <h4>Credits</h4>
     <p style="color:blue;"> Azeem Joseph (@Azeem Joseph) https://github.com/azeemjoseph </p>
              
     <h4>## License</h4>
              
-    <p style="color:blue;">The MIT License (MIT)</p>`);
+    <p style="color:Navy;border-style:solid;border-color:Green;">The MIT License (MIT)</p>`);
 });
 
 
