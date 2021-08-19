@@ -4,7 +4,8 @@
   "description": "A Node.js Application connected through nginx to balance the load of traffic that each server get. using Express.js and Sequilze to connect with Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server Databases. ",
   "main": "server.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "dev": "nodemon server.js -L"
   },
   "repository": {
     "type": "git",
@@ -23,4 +24,18 @@
     "url": "https://github.com/azeemjoseph/nodejs-nginx-load-balancer/issues"
   },
   "homepage": "https://github.com/azeemjoseph/nodejs-nginx-load-balancer#readme"
+},
+"dependencies": {
+  "body-parser": "^1.19.0",
+  "cors": "^2.8.5",
+  "dotenv": "^10.0.0",
+  "express": "^4.17.1",
+  "mysql2": "^2.2.5",
+  "sequelize": "^6.6.5",
+  "wait-port": "^0.2.9"
+},
+"devDependencies": {
+  "jasmine": "^3.8.0",
+  "nodemon": "^2.0.12",
+  "sequelize-cli": "^6.2.0"
 }
