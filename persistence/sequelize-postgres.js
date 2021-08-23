@@ -24,8 +24,7 @@ async function init_sequelize() {
 
   const sequelize = new Sequelize(database, user, password, {
     host: host,
-    dialect: "mysql",
-    
+    dialect: "mysql",    
 
     pool: {
       max: 5,

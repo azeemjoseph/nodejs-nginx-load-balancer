@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   nodejs-sequelize:
-    image:  azeemjoseph/nodejs-expressjs-sequelize:2.0
+    image:  nodejs-sequelize-load
     command: sh -c "yarn install && yarn run dev"
     ports: 
       - "5000"

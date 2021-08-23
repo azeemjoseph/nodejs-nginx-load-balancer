@@ -4,7 +4,8 @@
   "description": "A Node.js Application connected through nginx to balance the load of traffic that each server get. using Express.js and Sequilze to connect with Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server Databases. ",
   "main": "server.js",
   "scripts": {
-    "test": "jasmine",
+    "test-init": "./node_modules/jasmine/bin/jasmine.js init",
+    "test": "./node_modules/jasmine/bin/jasmine.js",
     "dev": "nodemon server.js -L"
   },
   "repository": {
@@ -35,6 +36,7 @@
   },
   "devDependencies": {
     "jasmine": "^3.8.0",
+    "node-fetch": "^2.6.1",
     "nodemon": "^2.0.12",
     "sequelize-cli": "^6.2.0"
   }

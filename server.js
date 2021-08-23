@@ -17,6 +17,7 @@ app.get("/", (req, res) => {
   res.send(`
     <br>&emsp;&emsp; <h3 style="color:Maroon;border-width:10px;border-style:solid;border-color:olivedrab;">Nginx server to load balance Nodejs Server with Express and Sequelize Configuration with Migration and Models running succesfully!!</h1>
     <p style="color:blue;"> Now you can modify, edit, merge up to your requirements.</p>
+    <p style="color:blue;"> when compose file :  run docker-compose up --scale nodejs-sequelize=4 -d</p>
     <h4>Credits</h4>
     <p style="color:blue;"> Azeem Joseph (@Azeem Joseph) https://github.com/azeemjoseph </p>
              
