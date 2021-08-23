@@ -26,7 +26,6 @@ app.get("/", (req, res) => {
     <p style="color:Navy;border-style:solid;border-color:Green;">The MIT License (MIT)</p>`);
 });
 
-
 app.use(users);
 
 sequelize.init_sequelize().then(() => {
